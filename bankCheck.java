@@ -20,7 +20,7 @@ class transaction {
     }
 }
 
-public class bank {
+public class bankCheck {
     public static void main(String[] args) {
         transaction t1=new transaction();
         t1.getAccount(101, 3400.63, "Sandip");

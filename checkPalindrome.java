@@ -6,10 +6,14 @@ public class checkPalindrome {
         System.out.print("Enter a string: ");
         String s=sc.next();
         int n=s.length();
-        String test="";
-        for (int i=n-1; i>=0; i--)  test+=s.charAt(i);
-        if (test.equals(s))    System.out.println("The entered string is a palindrome!!!");
-        else System.out.println("The string is not a palindrome:(");
+        for (int i=0; i<n; i++) {
+            if (s.charAt(i)!=s.charAt(n-1-i)) {
+                System.out.println("The string is not a palindrome:(");
+                sc.close();
+                return;
+            }
+        }
+        System.out.println("The entered string is a palindrome!!!");
         sc.close();
     }
 }
